@@ -27,7 +27,7 @@ public class LoginPageScenarios {
         driver = DriverSetup.initialize_Driver("firefox-remote");
     }
 
-    @Ignore
+    /*@Ignore
     public void m6() {
         loginPage.clickLoginButton();
     }
@@ -36,14 +36,19 @@ public class LoginPageScenarios {
     public void m7() {
         loginPage.clickLoginButton();
         System.out.println("Using @Test(timeout),it can be used to enforce timeout in JUnit4 test case");
-    }
+    }*/
 
-    @Test(expected = ElementNotInteractableException.class)
+    /*@Test(expected = ElementNotInteractableException.class)
     public void m8() {
         System.out.println("Using @Test(expected) ,it will check for specified exception during its execution");
         loginPage.loginEnterEmail("sdet@tester.com");
-    }
+    }*/
 
+    @Test()
+    public void m8(){
+        loginPage.clickLoginButton();
+
+    }
     @Test()
     public void m9() {
         loginPage.loginEnterEmail("sdet@tester.com");
@@ -51,6 +56,7 @@ public class LoginPageScenarios {
 
     private static StringBuilder output = new StringBuilder("");
 
+    /*
     @Test
     public void myATest() {
         output.append("A");
@@ -75,6 +81,7 @@ public class LoginPageScenarios {
     public void myBTest() {
         output.append("B");
     }
+    */
 
     @AfterAll
     public static void assertOutput() {
