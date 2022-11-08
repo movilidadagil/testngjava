@@ -29,7 +29,7 @@ public class DriverSetup {
         properties = ConfigReader.getProperties();
         if(browser.equals("firefox-remote")){
             FirefoxOptions firefoxOptions = new FirefoxOptions();
-            driver = new RemoteWebDriver(new URL("http://127.0.0.1"), firefoxOptions);
+            driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444"), firefoxOptions);
         }
         if (browser.equals("Chrome")) {
             WebDriverManager.chromedriver().setup();
